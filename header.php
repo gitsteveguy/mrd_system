@@ -1,4 +1,26 @@
 <?php
+// Get the requested URL
+$request_uri = $_SERVER['REQUEST_URI'];
+
+// Extract the base URL without parameters
+$base_url = strtok($request_uri, '?');
+
+// Check if the base URL ends with .php
+if (strpos($base_url, '.php') !== false) {
+    // Remove the .php extension
+    $url_without_php = preg_replace('/\.php$/', '', $base_url);
+
+    // Redirect the user to the URL without the .php extension
+    $redirect_url = 'http://' . $_SERVER['HTTP_HOST'] . $url_without_php;
+    
+    // If there are parameters, append them to the redirect URL
+    if ($_SERVER['QUERY_STRING']) {
+        $redirect_url .= '?' . $_SERVER['QUERY_STRING'];
+    }
+
+    header('Location: ' . $redirect_url, true, 301);
+    exit();
+}
 include_once('protect.php');
 if (isset($_GET['user'])) {
     $user_id = $_GET['user'];
