@@ -76,13 +76,24 @@ function pheader($title)
         <img src=\"images/Site/main-header-image.png\" alt=\"header-logo\" class=\"img-fluid fullimg\"></img>
         <div class=\"justify-content-center d-flex\">
         </div>
-        <h4 class= \"text-success text-center\"> Welcome $current_user_name</h4>
-    </nav>
-</div>";
+        ";
 ?>
+<?php if(!(basename($_SERVER['PHP_SELF'])=="login.php")) 
+            {?>
+<h4 class= "text-success text-center"> Welcome <?php echo $current_user_name ?></h4>
+          <?php  }?>
+    </nav>
+</div>
+<?php if(!(basename($_SERVER['PHP_SELF'])=="login.php")) 
+            {
+            ?>
     <div class="row my-2 mx-2 d-flex no-print">
         <div class="col text-start">
+        <?php if(!(basename($_SERVER['PHP_SELF'])=="mrddashboard.php")) 
+            {
+            ?>
             <a href="mrddashboard.php" class="btn btn-primary">Home</a>
+            <?php } ?>
         </div>
         <div class="col text-center">
             <div id="google_translate_element"></div>
@@ -99,7 +110,8 @@ function pheader($title)
             <a href="logout.php" class="btn btn-primary">Logout</a>
         </div>
     </div>
-    <?php if(isset($user_id)) {
+    <?php } 
+    if(isset($user_id)) {
     ?>
     <div class="row mx-5">
     <?php if(basename($_SERVER['PHP_SELF'])=="patient.php") 
