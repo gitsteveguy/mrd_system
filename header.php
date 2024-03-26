@@ -73,7 +73,7 @@ function pheader($title)
 </head>
 <div class=\"header bg-white\">
     <nav>
-        <img src=\"images/Site/shinshiva-main-header-image.png\" alt=\"header-logo\" class=\"img-fluid fullimg\"></img>
+        <img src=\"images/Site/main-header-image.png\" alt=\"header-logo\" class=\"img-fluid fullimg\"></img>
         <div class=\"justify-content-center d-flex\">
         </div>
         <h4 class= \"text-success text-center\"> Welcome $current_user_name</h4>
