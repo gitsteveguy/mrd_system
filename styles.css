@@ -1,0 +1,170 @@
+body{
+    background-image: linear-gradient(to right, #006900 , #11b5af);
+    color: white;
+}
+input[type="text"],input[type="email"],input[type="number"],input[type="date"],input[type="time"],input[type="tel"],input[type="file"],input[type="password"].form-control {
+background: transparent;
+border: none;
+border-bottom: 1px solid white;
+color:white;
+-webkit-box-shadow: none;
+box-shadow: none;
+border-radius: 0;
+}
+::-webkit-calendar-picker-indicator {
+    filter: invert(100%);
+  }
+
+input[type="text"]:focus,input[type="email"]:focus,input[type="number"]:focus,input[type="date"]:focus,input[type="time"]:focus,input[type="tel"]:focus,input[type="file"]:focus,input[type="password"]:focus.form-control:focus {
+background: transparent;
+-webkit-box-shadow: none;  
+color:white;
+box-shadow: none;
+}
+.form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    opacity: 1; /* Firefox */
+}
+
+.form-control:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: white;
+}
+
+.form-control::-ms-input-placeholder { /* Microsoft Edge */
+    color: white;
+}
+.fullimg{
+    min-width: 100%;
+    height: 130px;
+}
+header{
+   /* background-color: white;*/
+}
+.select2{
+    background-color: transparent;
+    color: white;
+    
+}
+.select2-container--open .select2-dropdown--below{
+    background-color: transparent;
+}
+#sign {
+    background-color: white;
+}
+/*Patient visit card*/
+.card-body{
+    
+}
+label{
+    display: block;
+}
+textarea {
+    display: block;
+    background: transparent;
+    color: #fff;
+    resize: none;
+    border: 4;
+    outline: none;
+    border-color: #fff;
+    border-radius: 20px;
+    padding: 7px;
+  }
+  .btn-success{
+    background-color: #039d03;
+  }
+
+  table { page-break-inside:auto }
+    tr    { page-break-inside:avoid; page-break-after:auto }
+    thead { display:table-header-group }
+    tfoot { display:table-footer-group }
+
+    @media print {
+      body{
+        color: black;
+      }
+      input[type="text"],input[type="email"],input[type="number"],input[type="date"],input[type="time"],input[type="tel"],input[type="file"],input[type="password"],select,
+select.form-control {
+  border-bottom: 1px solid rgb(0, 0, 0); 
+  color: black;
+}
+textarea{
+  border-color: black;
+  color: black;
+}
+.table td {
+  color: black !important;
+}
+.table th {
+  color: black !important;
+}
+        table {
+            font-size: 9px;
+            font-weight: bold!important;
+            width: 10%;
+            border-color: black!important;
+          }
+          .ltable{
+            font-size: 6.5px!important;
+          }
+          .no-print{
+            display: none!important;
+          }
+          .btn{
+            display: none!important;
+          }
+    }
+    #\:1\.container{
+      display: none!important;
+    }
+    .drag-area{
+        border: 2px dashed #fff;
+        height: 300px;
+        width: 300px;
+        border-radius: 5px;
+        display: flex;
+        color: #fff;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+      .drag-area.active{
+        border: 2px solid #fff;
+      }
+      .drag-area .icon{
+        font-size: 50px;
+        color: #fff;
+      }
+      .drag-area header{
+        font-size: 10px;
+        font-weight: 500;
+        color: #fff;
+      }
+      .drag-area span{
+        font-size: 5px;
+        font-weight: 500;
+        color: #fff;
+        margin: 5px 0 3px 0;
+      }
+      .drag-area button{
+        padding: 10px 25px;
+        font-size: 20px;
+        font-weight: 500;
+        border: none;
+        outline: none;
+        background: #fff;
+        color: #25a22f;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .drag-area img{
+        height: 300px;
+        width: 300px;
+        object-fit: contain;
+        border-radius: 5px;
+      }
+      .form-control:disabled {
+        background-color: #ffffff00;
+        color: rgb(255, 255, 255);
+        opacity: 1;
+    }
+  

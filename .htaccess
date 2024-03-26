@@ -1,0 +1,9 @@
+Options -Indexes -MultiViews +FollowSymLinks
+RewriteEngine On
+
+# Rewrite URLs without .php extension to corresponding PHP files
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^([^\.]+)$ $1./index.php [NC,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
