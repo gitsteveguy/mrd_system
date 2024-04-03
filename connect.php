@@ -1,6 +1,6 @@
 <?php
 // Create connection
-$conn = new mysqli('localhost','root','','new_mrd_database');
+$conn = new mysqli('localhost','root','','ironboyi_mrd');
 
 // Check connection
 if ($conn->connect_error) {

@@ -4,7 +4,7 @@ ini_set('display_errors', 1);
 include('connect.php');
 include_once('header.php');
 pheader("submitted");
-$username;
+print_r($_POST);
     if(empty($_POST['username']))
     {die("username is required");}
     if(empty($_POST['firstname']))
