@@ -1,11 +1,7 @@
 <?php
 include_once('header.php')
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<?php
-pheader("Create Patient");
-?>
+
 <?php
 if($_POST){
 error_reporting(E_ALL);
@@ -13,7 +9,6 @@ ini_set('display_errors', 1);
 include('connect.php');
 include_once('header.php');
 pheader("submitted");
-print_r($_POST);
     if(empty($_POST['username']))
     {die("username is required");}
     if(empty($_POST['firstname']))
@@ -77,14 +72,17 @@ if (!$stmt) {
 $stmt->bind_param("sssssssssssssssssss", $username, $email, $password, $first_name, $last_name, $role, $date_of_birth,$mrdno,$phone_no, $profile_img_loc, $gender, $addressline1, $addressline2, $addressline3, $country, $pincode, $sign_img_loc, $occupation, $blood_group);
 if (!$stmt->execute()) {
   die("Error: " . $stmt->error);
-} else {
-  echo "New record created successfully";
-}
+} 
 
 $stmt->close();
 $conn->close();
 header("Location: mrddashboard.php");
 }
+?>
+<!DOCTYPE html>
+<html lang="en">
+<?php
+pheader("Create Patient");
 ?>
 <body id="body">
   <h1 class="text-center my-3">Patient Registration Form</h1>
